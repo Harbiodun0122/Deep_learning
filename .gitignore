@@ -1,0 +1,10 @@
+# Default ignored files
+/.idea/
+/venv/Files/datasets/dog vs cat/
+/venv/Files/datasets/single_prediction/
+/venv/Files/photos/
+/venv/Files/videos/
+/venv/Include/
+/venv/Lib/
+/venv/Scripts/
+/venv/pyvenv.cfg/

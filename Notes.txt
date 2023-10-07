@@ -1,0 +1,345 @@
+TYPES OF ARTIFICIAL INTELLIGENCE
+1. REACTIVE MACHINES
+    This kind of AI are purely reactive and do not hold the ability to form memories or
+    use past experiences to make decisions. These machines are designed to do specific jobs
+
+2. LIMITED MEMORY
+    This kind of AI uses past experience and the present data to make a decision. Self driving
+    cars are a kind of limited memory AI. This is our present age AI
+
+3. THEORY OF MIND
+   These AI machines can socialize and understand human emotions, machines with such abilities
+   are yet to be built
+
+4. SELF AWARENESS
+    This is the future of AI. These machines will be super intelligent, sentient and conscious
+
+
+ACHIEVING ARTIFICIAL INTELLIGENCE
+1. MACHINE LEARNING
+    Machine learning provides artificial intelligence with the ability to learn. This is
+    achieved by using algorithms that discover patterns and generate insights from the
+    data they are exposed to.
+
+2. DEEP LEARNING
+    Deep learning provides artificial intelligence the ability to mimic a human brain's
+    neural network. It can make sense of patterns, noise and sources of confusion in the data.
+
+    Input layer ------> Hidden layers ------> Output layer
+    THE MORE THE HIDDEN LAYER, THE MORE COMPLEX THE MODEL. THE HIDDEN LAYERS ARE RESPONSIBLE FOR ALL THE
+    MATHEMATICAL COMPUTATIONS OR FEATURE EXTRACTION ON OUR INPUTS
+
+
+APPLICATIONS OF ARTIFICIAL INTELLIGENCE
+    EXAMPLE -----> Predict if a person has high risk of diabetes or not based on previous test data
+
+WHAT IS DEEP LEARNING?
+	Deep learning is a subset of machine learning that has networks which are capable of learning from data that is unstructured  or unlabelled and works similar to the functioning of a human brain.
+	It is the application of machine learning that uses complex algorithms and deep neural nets to train a model.
+
+WHY DO WE NEED DEEP LEARNING?
+	1. Works with unstructured data
+	2. Handle complex operations
+	3. Feature extraction
+	4. Achieve best performance
+
+WHAT IS A NEURAL NETWORK?
+	Neural networks are modelled after biological neural networks that allow computers to learn and interact like humans to do. It has interconnected neurons with dendrites that receive inputs and based on those inputs, it produces an electric signal i.e output through the axon.
+
+BIOLOGICAL VS ARTIFICIAL NEURON
+	Dendrites ----> Input layer
+	Cell nucleus ----> Nodes
+	Synapse ----> Weights
+	Axon ----> Output
+
+WHAT IS A PERCEPTRON?
+	A perceptron is the basic part of a neural network. It represents a single neuron of a human brain and is used for binary classifiers
+
+PERCEPTRON LEARNING RULE
+	1. Inputs are multiplied with the weights and a summation is performed, plus a bias is added
+	2. The weighted sum of inputs is passed to an activation function to determine if a neuron will fire or not
+	3. Perceptron receives input signals and if the sum of the input signals exceeds a certain threshold value, it either outputs a signal or does not return an output.
+	4. The error in the output is back-propagated and weights are updated to minimize the error
+	REPEAT STEPS 1 TO 4 IN ORDER TO GENERATE THE DESIRED OUTPUT.
+
+IMPLEMENTING LOGIC GATES USING PERCEPTRON
+	Popular logic gates ----> AND, OR, XOR, NOT, NOR, NAND
+
+
+TYPES OF NEURAL NETWORK
+1. ARTIFICIAL NEURAL NETWORK ----> ANN
+    FeedForward Neural Network --> Simplest form of ANN- data travels only in one direction ---> VISION AND SPEECH RECOGNITION
+    - Pattern Recognition
+2. CONVOLUTION NEURAL NETWORK ----> CNN
+    The input features are taken in batches like a filter. This allows the network to remember an image in parts
+    - Image Processing, Signal Processing
+3. RECURSIVE/RECURRENT NEURAL NETWORK ----> RNN
+    The hidden layer saves its output to be used for future prediction
+    - Speech Recognition, Text to Speech Conversion Model
+4. DEEP NEURAL NETWORK ----> DNN
+    - Acoustic Modelling
+5. DEEP BELIEF NETWORK ----> DBN
+    - Cancer Detection
+6. RADIAL BASIS FUNCTION NEURAL NETWORK
+    This model classifies the data point based on its distance from the center point
+    - Power Restoration Systems
+7. KOHONEN SELF ORGANISING NEURAL NETWORK
+    Vectors of random dimensions are input to discrete map comprised of neurons
+    - Recognize patterns in data like in medical analysis
+8. MODULAR NEURAL NETWORK
+   It has a collection of different neural networks working together to get the output
+   - Still undergoing research
+
+
+
+APPLICATIONS OF DEEP LEARNING
+1. Playing games
+2. Composing Music ----> GENERATIVE ADVERSARY NETWORK (GAN)
+3. Autonomous Driving Cars
+4. Building Robots
+5. Medical Diagnosis e.g Cancer detection
+
+WORKING OF NEURAL NETWORK e.g recognition of shapes
+1. 28*28 pixels of the input image is taken as input i.e 784 neurons
+2. Each neuron holds a number called ACTIVATION sum(w*x=b) that represents grayscale value of the corresponding
+    pixel ranging from 0 to 1. 1 for white pixel and 0 for black pixel
+3. Applying the cost function to minimize the difference between the predicted and actual output using gradient
+    descent algorithm. COST FUNCTION = 1/2(Y-Y)^2.
+    GRADIENT DESCENT is an OPTIMIZATION algorithm for finding the MINIMUM of a function
+4. Each neuron is lit up when its activation is close to 1
+
+
+INTRODUCTION TO TENSORFLOW
+    TENSORFLOW is a deep learning algorithm tool to define and run computations involving tensors
+    A TENSOR is a generalization of vectors and matrices to potentially higher dimensions
+    The ARRAY OF DATA passed in each layer of nodes is known as Tensor
+    TensorFlow is a popular open-source library released in 2015 by Google brain team for building machine
+    learning and deep learning models.
+    It is based on python programming language and performs numerical computations using data flow
+    to build models.
+
+FEATURES OF TENSORFLOW
+    1. Works efficiently with multi-dimensional arrays
+    2. provide scalability of computation across machines and large data sets
+    3. Supports fast debugging and model building
+    4. Has a large community and provides TensorBoard to visualize the models
+
+APPLICATIONS OF TENSORFLOW
+    1. Face Detection
+    2. Language Translation
+    3. Fraud Detection
+    4. Video Detection e.t.c
+
+    TensorFlow is derived from its core component known as a Tensor.
+    A Tensor is a vector or a matrix of n-dimensions tha represents all types of data
+    In TensorFlow, tensors are defined by a UNIT OF DIMENSIONALITY called as RANK
+    Rank 0 ---> Scalar ---> 400
+    Rank 1 ---> Vector ---> [3,4,5]
+    Rank 2 ---> Matrix ---> [[4,5,3], [4,5,7]]
+    Rank 3 ---> Tensor ---> [[[2], [4], [6], [7], [4], [87]]]
+
+    The basics of neural network and/in reverse propagation is the basics of tensorflow
+
+    Tensorflow performs computations with the help of dataflow graphs. It has nodes that represent the operations in your model.
+
+TENSORFLOW 1.0 VS 2.0
+    1. Tensorflow 2.0 supports EAGER EXECUTION by default. It allows you to build your models and run them instantly
+        TENSORFLOW 1.0                                                              TENSORFLOW 2.0
+        with tf.Session() as sess:                                        model.fit(trainX, trainY, validation_data=(valX, valY), epochs=250, batch_size=32)
+            sess.run(tf.global_variables_initializer())
+    2. Keras is the official HIGH-LEVEL API of TensorFlow 2.0. It has incorporated Keras as tf.Keras. Keras provides a number of model building APIs such as SEQUENTIAL, FUNCTIONAL
+        and SUBCLASSING, so you can choose the right level of abstraction for your project.
+    3. tf.variable_scope is not required in TensorFlow 2.0
+            TENSORFLOW 1.0                                                                          TENSORFLOW 2.0
+        In TensorFlow 1.x, in order to use tf.layers as variables, we had to                  In TensorFow 2.0, all the layers created using tf.layers can be put into a
+        write tf.variable block                                                               tf.Keras.Sequential definition
+
+        tf.compat.v1.variable_scope(name_or_scope, default_name=None, values=None,              model = tf.keras.Sequential([tf.keras.layers.Dropout(rate=0.2, input_shape=X_train.shape[1:]),
+        regularizer=None, caching_device=None, partitioner=None,                                          tfkeras.layers.Dense(units=64, activation='relu'), tf.keras.layers.Dropout(rate=0.2)......
+        custom_getter=None, reuse=None......)                                                           ])
+    4. API Cleanup in TensorFlow 2.0
+            TENSORFLOW 1.0                                                                          TENSORFLOW 2.0
+        In TensorFlow 1.x, you can build models using tf.gans, tf.app,                          In TensorFlow 2.0, a lot of APIs have been removed such as tf.app, tf.flags and tf.logging
+        tf.contrib, tf.flags e.t.c
+    5. tf.function and AutoGraph feature
+            TENSORFLOW 1.0                                                                          TENSORFLOW 2.0
+        With TensorFlow 1.0, the python functions were limited and it could not be compiled      You can write a python function using tf.function() to mark it for JIT COMPILATION  so that tensorflow runs it as a single
+        or exported/reimported                                                                   single graph. Autograph feature of tf.function helps to write graph code using natural python syntax
+
+TENSORFLOW TOOLKITS HIERARCHY
+    Estimators, tf.keras                <---------------- High-level, object oriented API
+    tf.layers, tf.losses, tf.metrics    <---------------- Reusable libraries for model building
+    low-level TF API                    <---------------- Extensive control
+    cpu, gpu, tpu                       <---------------- TF code can run on multiple platforms
+
+CONVOLUTIONAL NEURAL NETWORK
+    .........
+
+
+RECURRENT NEURAL NETWORK
+    RNN works on the principle of saving the output of a layer and feeding it back to the input in order to predict the output of a layer
+    FEED FORWARD NEURAL NETWORK
+        In a feed forward neural network, information flows only in forward direction, from the input nodes, through the hidden layers(if any) and to the output nodes.
+            There are no cycles or loops in the network.
+    ISSUES IN FEED FORWARD NEURAL NETWORK
+        1. Cannot handle sequential data
+        2. Considers only the current input
+        3. Cannot memorize previous inputs
+    APPLICATIONS OF RNN
+        1. RNN is used to caption an image by analysing the activities present in it.
+        2. Time series prediction: any time series problem like predicting the prices of stocks in a particular month can be solved using RNN
+        3. Natural language processing: text mining and sentiment analysis can be carried out using RNN for natural language processing.
+        4. Machine translation: given an output in one language, RNN can be used to translate the input into different languages as output
+    TYPES OF RNN
+        1. ONE TO MANY
+        2. MANY TO ONE: takes in a sequence of inputs. Example: sentiment analysis where a given sentence can be classified as expressing positive or negative comments
+        3. MANY TO MANY: takes in a sequence of inputs and generates a sequence of outputs. Example: Machine translation
+    VANISHING GRADIENT PROBLEM
+       While training a RNN, your slope can be either too small or very large and this makes training difficult. When the slope is too small, the problem is known as VANISHING GRADIENT
+    EXPLODING GRADIENT DESCENT
+        When the slope tends to grow exponentially instead of decaying, this problem is called EXPLODING GRADIENT
+    ISSUES IN GRADIENT PROBLEM
+        1. Long training time
+        2. Poor performance
+        3. Bad accuracy
+    SOLUTION TO GRADIENT PROBLEM
+            EXPLODING GRADIENT                                                                  VANISHING GRADIENT
+        1. Identity initialization                                                      weight initialization
+        2. Truncated back-propagation                                                   choosing the right activation function
+        3. Gradient clipping                                                            Long Short-Term Memory Networks(LSTMs)
+    LONG SHORT TERM MEMORY NETWORKS
+        LSTMs are special kind of Recurrent Neural Networks, capable of learning long-term dependencies. Remembering information for long periods of time is their default behaviour
+        All recurrent neural networks have the form of a chain of repeating modules of neural network. In a standard RNNs, this repeating
+            module will have a very simple structure such as a single tanh layer.
+        LSTMs also have a chain like structure, but the repeating module has a different structure. Instead of having a single neural network
+            layer, there are four interacting layers communicating in a very special way.
+        3 STEPS PROCESS OF LSTMs
+            1. Forget irrelevant parts of previous state: first step in the LSTM is to decide which information to be omitted in from the cell in that particular time step. It is decided by
+                the sigmoid function. It looks at the previous state (Ht-1) and current input Xt, and computes the function.
+            2. Selectively update cell state values: in the second layer, there are 2 parts. One is the sigmoid function and the other is the tanh. In the sigmoid function, it decides which values to let through(0 or 1).
+                tanh function gives the weightage to the values which are passed deciding their level of importance (-1 to 1)
+            3. Decides what part of the current cell state makes it to the output: the third step is to decide what will be our output. First we run a sigmoid layer which decides which part of the cell state maks it to the output. Then, we put
+                the cell state through tanh to push the values to be between -1 and 1 and multiply it by the output of the sigmoid gate.
+
+
+GENERATIVE ADVERSARIAL NETWORKS
+    Generative Adversarial Networks is an example unsupervised machine learning. It consists of two models that compete with each other to analyse, capture and copy the variations within a dataset
+    GENERATOR
+        The Generator in GAN learns to create fake data by incorporating feedback from the discriminator
+            Random Input ------> Generator Network ------> Fake Image
+    DISCRIMINATOR
+        The Discriminator in GAN is a classifier that identifies real data from the fake data created by the Generator.
+    HOW GANs WORK
+        GANs consist of 2 networks, a Generator G(x) and a Discriminator D(x)
+        The Generator learn the distribution of data and is trained to increase the probability of the Discriminator network to make mistakes.
+        The Discriminator estimates the probability that the sample it got is from the training data and not from the Generator.
+        The mathematical formula for working on GANs can be represented as: V(D, G) = Ex-pdata(x) [logD(x)] + Ez-p(z) [log(1-D(G(z)))]
+            Where G = Generator
+                  D = Discriminator
+                  Pdata(x) = distribution of real data
+                  P(z) = distribution of generator
+                  x = sample from P(data)
+                  z = sample from P(z)
+                  D(x) = Discriminator network
+                  G(z) = Generator network
+    STEPS FOR TRAINING GAN
+        Define the problem
+        Choose the architecture of GAN
+        Train the discriminator on real data
+        Generate fake data for Generator
+        Train the Discriminator on fake data
+        Train Generator with the output of Discriminator
+    TYPES OF GANs
+        1. Vanilla GANs: simplest type of GAN where the Generator and Discriminator are simple multi-layer perceptron
+        2. Deep Convolutional GANs(DCGANs): comprise of ConvNets and are more stable and generate higher quality images
+        3. Conditional GANs(CGANs): use extra label information to generate better results
+        4. Super Resolution GAN(SRGAN):  generate a photorealistic high-resolution image when given a low-resolution image
+    APPLICATIONS OF GANs
+        1. Generating cartoon characters: using DCGANs, you can create faces of anime and Pokemon characters
+        2. Generating human faces: GANs can be trained on the images of humans to generate realistic faces
+        3. Text to image translation: GANs can build realistic images from textual descriptions of simple objects like birds.
+        4. 3-D object generation: GANs can generate 3-D models using 2-D pictures of objects from multiple perspectives, very popular in the gaming industry
+
+KERAS
+    WHAT IS KERAS?
+        Keras is a high level deep learning API written in python for easy implementation of neural networks. It uses deep learning frameworks such as TensorFlow, Pytorch etc as backend to make
+        computation faster.
+        Keras works by using complex deep learning frameworks such as tensorflow, pytorch, mlplaid etc as the backend  for fast computation while providing a
+        user friendly and easy-to-learn frontend
+    WORKING PRINCIPLE OF KERAS
+        Keras uses computational graphs to express and evaluate mathematical expressions
+        1. Expressing complex problems as combination of simple mathematical operators
+        2. Useful for calculating derivatives by using backpropagation
+        3. Easier to implement distributed computation
+        4. For solving complex problems, specify input and outputs and make sure all nodes are connected
+    KERAS MODEL
+        1. SEQUENTIAL MODEL: Sequential model is a linear stack of layers where the previous layer leads into the next layer
+            1. Useful for simple classifier or decoder models
+            2. Multi input and multi output model
+        2. FUNCTIONAL MODEL:
+            1. Multi input and multi output model
+            2. Complex model which forks into two or more branches
+    WHAT ARE NEURAL NETWORKS?
+        Neural networks are deep learning algorithms modelled after the human brain. They use multiple neurons, which are mathematical operations to break down and solve complex mathematical problems.
+    DATA PRE-PROCESSING
+        We will create our own data example set with Keras. The data consists of a clinical trial conducted on 2100 patients ranging from ages 13 to 100 with half the patients under 65 and the other half over 65 years of age. We
+        want to find the possibility of a patient experiencing side effects due to their age.
+    IMPLEMENTING NEURAL NETWORK WITH KERAS
+        We'll implement it using python code, check the tutorial files.
+        After creating our samples and labels, we need to create our Keras neural network model. We will be working with a Sequential model
+        which has three layers.
+    TRAINING NEURAL NETWORK WITH KERAS
+        Training our model is a two-step process. We first compile our model and then we train it on our training dataset
+        COMPILING:
+            * Compiling converts the code into a form understandable by the machine
+            * We shall use Adam, a gradient descent algorithm to optimize the model
+        TRAINING:
+            * Training our model means to let it learn on the training data
+            * We will train the model on the scaled_train_sample set
+    CREATING A CONFUSION MATRIX WITH KERAS
+        As we are performing classification on our data, we need a confusion matrix to check the results. A confusion matrix breaks down the various misclassifications as
+        well as correct classification to get the accuracy.
+        * True positives: Number of correct predictions for the positive label
+        * False positives: Number of negative values classified as positive
+        * True Negatives: Number of correctly classified negative values
+        * False Negatives: Number of positive values falsely classified as negative
+                                                Actual
+                 |              |    Positive           |     Negative
+        predicted| Positive     |    True Positive      |    False Positive  |
+                 |  Negative    |     False Negative    |      True Negative |
+
+
+WHAT IS COMPUTER VISION?
+    Computer vision is a field of machine learning whose goal is to help computers 'see'. It's end goal is to make intelligent systems which can understand digital images.
+    WHAT IS OpenCV?
+        OpenCV is the huge open-source library for the computer vision, machine learning, and image processing. It can be used to process images and videos to identify objects, faces or even handwritting
+            of a human
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CALLBACKS, CHECKPOINTS AND EARLY STOPPING
+    * Callbacks are objects in keras that can be used to monitor metrics and perform actions during training
+    * ModelCheckpoint is a callback to save trained model during training
+    * EarlyStopping is a callback to stop model training early based on certain conditions.
+        * Validation loss per epoch can be used as a metric to make termination decision
+        * Patience value can be used to extend the training beyond early stopping point. For example, this ensures that a true minimum in validation loss was achieved
