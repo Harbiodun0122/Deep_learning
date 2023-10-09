@@ -4,7 +4,7 @@ from cv2 import cv2 as cv
 
 haar_cascade = cv.CascadeClassifier('haar_face.xml')
 people = ['Mbappe', 'Messi', 'Neymar', 'Pedri', 'Ronaldo', 'Suarez']
-DIR = r'C:\Users\USER\Documents\Data Science and AI\Deep Learning\venv\Files\Face detection and recognition\train'
+DIR = r'train'
 
 features = np.load('features.npy', allow_pickle=True)
 features = np.load('labels.npy')
